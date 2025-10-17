@@ -39,13 +39,11 @@ layout: default
       {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
       {% for paper in selected_papers %}
         <div class="paper">
-          <div class="row">
-            <div class="four columns">
-              <div class="figure">
-                <img src="{{ paper.image }}" width="100%">
-              </div>
+          <div class="paper-row">
+            <div class="paper-image">
+              <img src="{{ paper.image }}" alt="paper image">
             </div>
-            <div class="twelve columns">
+            <div class="paper-info">
               <p class="title"><b>{{ paper.title }}</b></p>
               <p>{{ paper.authors }}</p>
               <p><i>{{ paper.venue }}</i></p>
@@ -53,23 +51,12 @@ layout: default
                 {% if paper.paper_pdf %}
                   <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
                 {% endif %}
-
                 {% if paper.project_page %}
                   <a class="button" href="{{ paper.project_page }}" target="_blank">Project</a>
                 {% endif %}
-
-                {% if paper.slides %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                {% endif %}
-
-                {% if paper.poster %}
-                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                {% endif %}
-
                 {% if paper.video %}
                   <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
                 {% endif %}
-
                 {% if paper.code %}
                   <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
                 {% endif %}

@@ -27,6 +27,17 @@ h4 {
   font-weight: 100;
   line-height: 25px;
   text-transform: none; }
+.paper-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; }
+.paper-image {
+  flex: 0 0 25%; }
+.paper-image img {
+  width: 100%;
+  border-radius: 8px; }
+.paper-info {
+  flex: 1; }
 .section-header {
   text-transform: uppercase;
   font-size: 1.5rem;
