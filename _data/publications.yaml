@@ -11,7 +11,7 @@ papers:
 
   - title: "HAMLET: Switch your Vision-Language-Action Model into a History-Aware Policy"
     image: "/assets/publications/2025_hamlet/1_teaser.png"
-    authors: "<b><u>Myungkyu Koo</u></b><sup>*</sup>, <a href='https://choidae1.github.io/'>Daewon Choi</a><sup>*</sup>, <a>Taeyoung Kim</a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://changyeon.page/'>Changyeon Kim</a>, <a href='https://younggyo.me/'>Younggyo Seo</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>"
+    authors: "<b><u>Myungkyu Koo</u></b>*, <a href='https://choidae1.github.io/'>Daewon Choi</a>*, <a>Taeyoung Kim</a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://changyeon.page/'>Changyeon Kim</a>, <a href='https://younggyo.me/'>Younggyo Seo</a><sup>&#8224;</sup>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a><sup>&#8224;</sup>"
     # venue: ""
     paper_pdf: "https://arxiv.org/abs/2510.00695"
     project_page: "https://myungkyukoo.github.io/hamlet/"
