@@ -1,20 +1,20 @@
 papers:
-  - title: "Contrastive Representation Regularization for Vision-Language-Action Models"
-    image: "/assets/publications/2025_rs_cl/1_overview.png"
-    authors: "<a>Taeyoung Kim</a>, <a>Jimin Lee</a>, <b><u>Myungkyu Koo</u></b>, <a href='https://kingdy2002.github.io/'>Dongyoung Kim</a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://changyeon.page/'>Changyeon Kim</a>, <a href='https://younggyo.me/'>Younggyo Seo</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>"
-    # venue: ""
-    paper_pdf: "https://arxiv.org/abs/2510.01711"
-    # project_page: ""
-    # code: ""
-    # poster: ""
-    selected: y
-
   - title: "HAMLET: Switch your Vision-Language-Action Model into a History-Aware Policy"
     image: "/assets/publications/2025_hamlet/1_teaser.png"
     authors: "<b><u>Myungkyu Koo</u></b>*, <a href='https://choidae1.github.io/'>Daewon Choi</a>*, <a>Taeyoung Kim</a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://changyeon.page/'>Changyeon Kim</a>, <a href='https://younggyo.me/'>Younggyo Seo</a><sup>&#8224;</sup>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a><sup>&#8224;</sup>"
     venue: "International Conference on Learning Representations (ICLR) 2026"
     paper_pdf: "https://arxiv.org/abs/2510.00695"
     project_page: "https://myungkyukoo.github.io/hamlet/"
+    # code: ""
+    # poster: ""
+    selected: y
+
+  - title: "Contrastive Representation Regularization for Vision-Language-Action Models"
+    image: "/assets/publications/2025_rs_cl/1_overview.png"
+    authors: "<a>Taeyoung Kim</a>, <a>Jimin Lee</a>, <b><u>Myungkyu Koo</u></b>, <a href='https://kingdy2002.github.io/'>Dongyoung Kim</a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://changyeon.page/'>Changyeon Kim</a>, <a href='https://younggyo.me/'>Younggyo Seo</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>"
+    # venue: ""
+    paper_pdf: "https://arxiv.org/abs/2510.01711"
+    # project_page: ""
     # code: ""
     # poster: ""
     selected: y
