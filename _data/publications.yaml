@@ -4,7 +4,7 @@ papers:
     authors: "<a href='https://kingdy2002.github.io/'>Dongyoung Kim</a>*<sup>&#167;</sup>, <a>Huiwon Jang</a>*<sup>&#167;</sup>, <b><u>Myungkyu Koo</u></b>*, <a>Suhyeok Jang</a>*, <a>Taeyoung Kim</a>*, et al., <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a><sup>&#167;</sup>"
     venue: "RLWRLD Technical Report 2026"
     paper_pdf: "https://arxiv.org/abs/2605.03269"
-    # project_page: ""
+    project_page: "https://rlwrld.ai/ko/rldx-1"
     code: "https://github.com/RLWRLD/RLDX-1"
     # poster: ""
     selected: y
