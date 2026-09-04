@@ -1,0 +1,9 @@
+title: "Myungkyu Koo"
+description: "Ph.D. student at KAIST working on robotics foundation models."
+url: "https://myungkyukoo.github.io"
+baseurl: ""
+
+# jekyll-sitemap is on the GitHub Pages allow-list, so sitemap.xml is generated
+# on every build without any local tooling.
+plugins:
+  - jekyll-sitemap

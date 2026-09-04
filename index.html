@@ -3,89 +3,84 @@ layout: default
 ---
 <!-- ========== About ========== -->
 <div class="docs-section" id="about">
-  <h4>About</h4>
+  <h2 class="section-title">About</h2>
     <p>
       I am a third-year Ph.D. student at <a href="https://www.kaist.ac.kr/en/">KAIST</a>, advised by <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a>.
       I received my B.S. degree in Electrical Engineering at KAIST in 2024.
       My research focuses on robotics foundation models.
       From this perspective, I am especially interested in enhancing models' comprehensive world understanding by integrating diverse modalities across vision, language, and physical feedback.
-      Building on this, I work toward hierarchical reasoning and action prediction over long-term memory.
+      Building on this, I work toward hierarchical reasoning and action prediction over long-horizon context.
     </p>
 </div>
 
 <!-- ========== News ========== -->
 <!-- <div class="docs-section" id="news">
-  <h4>News</h4>
+  <h2 class="section-title">News</h2>
     <ul>
       <li>
         <b style="color:cadetblue">[Oct. 2022]</b> &nbsp&nbsp
          Our paper on Graph-Inducted Transformers (GIT) has been accepted to <b>EMNLP 2022</b>!
-      </li>
-      <li>
-        <b style="color:cadetblue">[Aug. 2022]</b>&nbsp&nbsp
-        Started my Ph.D. journey at <b>Georgia Tech</b>!
       </li>
     </ul>
 </div> -->
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
-  <h4>Publications</h4>
+  <h2 class="section-title">Publications</h2>
   <p class="pub-legend">
     (*: Equal Contribution, <sup>&#8224;</sup>: Equal Advising, <sup>&#167;</sup>: Research Lead)
   </p>
 
-  <div class="tab-content">
-    <div class="tab-pane active" id="papers-selected">
-      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
-      {% for paper in selected_papers %}
-        <div class="paper">
-          <div class="paper-row">
-            <div class="paper-image">
-              <img src="{{ paper.image }}" alt="{{ paper.title }} teaser">
-            </div>
-            <div class="paper-info">
-              <p class="title"><b>{{ paper.title }}</b></p>
-              <p>{{ paper.authors }}</p>
-              <p><i>{{ paper.venue }}</i></p>
-              <div class="paper-buttons">
-                {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i>Paper</a>
-                {% endif %}
-                {% if paper.project_page %}
-                  <a class="button" href="{{ paper.project_page }}" target="_blank" rel="noopener"><i class="fa fa-globe" aria-hidden="true"></i>Project</a>
-                {% endif %}
-                {% if paper.slides %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank" rel="noopener"><i class="fa fa-desktop" aria-hidden="true"></i>Slides</a>
-                {% endif %}
-                {% if paper.poster %}
-                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank" rel="noopener"><i class="fa fa-picture-o" aria-hidden="true"></i>Poster</a>
-                {% endif %}
-                {% if paper.video %}
-                  <a class="button" href="{{ paper.video }}" target="_blank" rel="noopener"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Video</a>
-                {% endif %}
-                {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>Code</a>
-                {% endif %}
-              </div>
-            </div>
+  {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
+  {% for paper in selected_papers %}
+    <div class="paper">
+      <div class="paper-row">
+        <div class="paper-image">
+          <img src="{{ paper.image | prepend: site.baseurl }}"
+               alt="{{ paper.title }} teaser"
+               width="{{ paper.image_width }}" height="{{ paper.image_height }}"
+               loading="lazy" decoding="async">
+        </div>
+        <div class="paper-info">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          {% if paper.venue %}<p><i>{{ paper.venue }}</i></p>{% endif %}
+          <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i>Paper</a>
+            {% endif %}
+            {% if paper.project_page %}
+              <a class="button" href="{{ paper.project_page }}" target="_blank" rel="noopener"><i class="fa fa-globe" aria-hidden="true"></i>Project</a>
+            {% endif %}
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank" rel="noopener"><i class="fa fa-desktop" aria-hidden="true"></i>Slides</a>
+            {% endif %}
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank" rel="noopener"><i class="fa fa-picture-o" aria-hidden="true"></i>Poster</a>
+            {% endif %}
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank" rel="noopener"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Video</a>
+            {% endif %}
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>Code</a>
+            {% endif %}
           </div>
         </div>
-      {% endfor %}
+      </div>
     </div>
-  </div>
+  {% endfor %}
 </div>
 
 <!-- ========== Education ========== -->
 <div class="docs-section" id="education">
-  <h4>Education</h4>
+  <h2 class="section-title">Education</h2>
     <div class="paper">
-      <p class="title"><b>Korea Advanced Institute of Science and Technology (KAIST)<b style="float:right;">Mar. 2024 - Present</b></b></p>
+      <p class="title entry-head"><b>Korea Advanced Institute of Science and Technology (KAIST)</b><span class="entry-date">Mar. 2024 - Present</span></p>
       <p>Ph.D. Student in Artificial Intelligence</p>
       <p>Advisor: <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a></p>
     </div>
     <div class="paper">
-      <p class="title"><b>Korea Advanced Institute of Science and Technology (KAIST)<b style="float:right;">Mar. 2018 - Feb. 2024</b></b></p>
+      <p class="title entry-head"><b>Korea Advanced Institute of Science and Technology (KAIST)</b><span class="entry-date">Mar. 2018 - Feb. 2024</span></p>
       <p>B.S. in Electrical Engineering (minor in Computer Science)</p>
       <p><i>Magna Cum Laude</i></p>
     </div>
@@ -93,59 +88,31 @@ layout: default
 
 <!-- ========== Experience ========== -->
 <div class="docs-section" id="experience">
-  <h4>Experience</h4>
+  <h2 class="section-title">Experience</h2>
     <div class="paper">
-      <p class="title"><b>Visiting Research Fellow<b style="float:right;">Mar. 2026 - Present</b></b></p>
+      <p class="title entry-head"><b>Research Engineer</b><span class="entry-date">Mar. 2026 - Present</span></p>
       <a href="https://www.rlwrld.ai">RLWRLD</a>
     </div>
     <div class="paper">
-      <p class="title"><b>Research Intern<b style="float:right;">Jul. 2023 - Dec. 2023</b></b></p>
+      <p class="title entry-head"><b>Research Intern</b><span class="entry-date">Jul. 2023 - Dec. 2023</span></p>
       <a href="https://www.pioncorp.com/">Pion Corporation</a>
     </div>
     <div class="paper">
-      <p class="title"><b>Undergraduate Research Intern<b style="float:right;">Mar. 2020 - Dec. 2020</b></b></p>
+      <p class="title entry-head"><b>Undergraduate Research Intern</b><span class="entry-date">Mar. 2020 - Dec. 2020</span></p>
       <a href="https://cilabs.kaist.ac.kr/home">CILAB, KAIST</a>
     </div>
 </div>
 
 <!-- ========== Honors & Awards ========== -->
 <div class="docs-section" id="honors">
-  <h4>Honors and Awards</h4>
+  <h2 class="section-title">Honors and Awards</h2>
     <div class="paper">
-      <p><b>Recipient</b>, Academic Excellence Award (Dean's List)<b style="float:right;">Jun. 2021</b></p>
-      <p></p>
+      <p class="entry-head"><span><b>Recipient</b>, Academic Excellence Award (Dean's List)</span><span class="entry-date">Jun. 2021</span></p>
     </div>
     <div class="paper">
-      <p><b>Recipient</b>, National Science & Technology Scholarship<b style="float:right;">Mar. 2018 - Feb. 2024</b></p>
-      <p></p>
+      <p class="entry-head"><span><b>Recipient</b>, National Science &amp; Technology Scholarship</span><span class="entry-date">Mar. 2018 - Feb. 2024</span></p>
     </div>
     <div class="paper">
-      <p><b>Recipient</b>, Hansung Scholarship for Gifted Students<b style="float:right;">Feb. 2016</b></p>
-      <p></p>
+      <p class="entry-head"><span><b>Recipient</b>, Hansung Scholarship for Gifted Students</span><span class="entry-date">Feb. 2016</span></p>
     </div>
 </div>
-
-<!-- ========== RESUME ========== -->
-<!-- <div class="docs-section" id="resume">
-  <h4>Vitæ</h4> -->
-
-  <!-- <p>Full CV in <a href={{ "/assets/cv/CV.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>.</p> -->
-  <!-- The Timeline -->
-  <!-- <ul class="timeline">
-    {% for exp in site.data.experience.experiences %}
-    <li>
-      {% if exp.category == "work" %}
-      <div class="direction-l">
-      {% else %}
-      <div class="direction-r">
-      {% endif %}
-        <div class="flag-wrapper">
-          <span class="flag">{{ exp.place }}</span>
-          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
-        </div>
-        <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }}</div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</div> -->

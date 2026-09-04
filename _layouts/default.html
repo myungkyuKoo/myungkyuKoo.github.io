@@ -6,7 +6,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>{{ site.data.main_info.name }}</title>
-  <meta name="description" content="Homepage of Myungkyu Koo">
+  <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Myungkyu Koo">
   <meta name="color-scheme" content="light dark">
 
@@ -28,13 +28,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ site.data.main_info.name }}">
   <meta property="og:title" content="{{ site.data.main_info.name }}">
-  <meta property="og:description" content="Ph.D. student at KAIST working on robotics foundation models.">
-  <meta property="og:url" content="https://myungkyukoo.github.io/">
-  <meta property="og:image" content="https://myungkyukoo.github.io{{ site.data.main_info.profile_pic }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ site.data.main_info.profile_pic | absolute_url }}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ site.data.main_info.name }}">
-  <meta name="twitter:description" content="Ph.D. student at KAIST working on robotics foundation models.">
-  <meta name="twitter:image" content="https://myungkyukoo.github.io{{ site.data.main_info.profile_pic }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.data.main_info.profile_pic | absolute_url }}">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -50,10 +50,6 @@
   <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend: site.baseurl }}>
 
-  <!-- JQuery
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src={{ "/libs/external/jquery-3.1.1.min.js" | prepend: site.baseurl }}></script>
-
   <!-- Font-Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href={{ "/libs/external/font-awesome-4.7.0/css/font-awesome.min.css" | prepend: site.baseurl }}>
@@ -62,11 +58,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href={{ "/libs/external/academicons-1.8.6/css/academicons.min.css" | prepend: site.baseurl }}>
 
-  <!-- Skeleton tabs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/skeleton_tabs/skeleton-tabs.css" | prepend: site.baseurl }}>
-  <script src={{ "/libs/external/skeleton_tabs/skeleton-tabs.js" | prepend: site.baseurl }}></script>
-
   <!-- Timeline
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href={{ "/libs/external/timeline.css" | prepend: site.baseurl }}>
@@ -74,7 +65,7 @@
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!--<link rel="stylesheet" href={{ "/libs/external/github-prettify-theme.css" | prepend: site.baseurl }}>-->
-  <script src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
+  <script defer src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -95,14 +86,14 @@
     <section class="header">
       <div class="row">
         <div class="three columns">
-          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" style="border-radius: 1rem;" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}' alt="{{ site.data.main_info.name }}"></a>
+          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" style="border-radius: 1rem;" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}' alt="{{ site.data.main_info.name }}" width="600" height="734"></a>
         </div>
         <div class="nine columns main-description">
             <h1>{{ site.data.main_info.name }}</h1>
             <p>{{ site.data.main_info.title }}</p>
             <p>{{ site.data.main_info.dept }}</p>
             <p>{{ site.data.main_info.office }}</p>
-            <p>{{ site.data.main_info.email }}</p>
+            <p><span id="email" data-email="{{ site.data.main_info.email }}">{{ site.data.main_info.email }}</span></p>
             <p>
               <a class="social-link" href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
                 <i class="ai fa ai-google-scholar-square" aria-hidden="true"></i>

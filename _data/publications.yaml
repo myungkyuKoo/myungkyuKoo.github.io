@@ -1,6 +1,8 @@
 papers:
   - title: "RLDX-1 Technical Report"
-    image: "/assets/publications/2026_rldx_1/overview.png"
+    image: "/assets/publications/2026_rldx_1/overview.webp"
+    image_width: 900
+    image_height: 756
     authors: "<a href='https://kingdy2002.github.io/'>Dongyoung Kim</a>*<sup>&#167;</sup>, <a>Huiwon Jang</a>*<sup>&#167;</sup>, <b><u>Myungkyu Koo</u></b>*, <a>Suhyeok Jang</a>*, <a href='https://ismty0805.github.io'>Taeyoung Kim</a>*, et al., <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a><sup>&#167;</sup>"
     venue: "RLWRLD Technical Report 2026"
     paper_pdf: "https://arxiv.org/abs/2605.03269"
@@ -10,7 +12,9 @@ papers:
     selected: y
 
   - title: "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models"
-    image: "/assets/publications/2026_moss/teaser.png"
+    image: "/assets/publications/2026_moss/teaser.webp"
+    image_width: 900
+    image_height: 255
     authors: "<a href='https://jiminlx.github.io/'>Jimin Lee</a>, <a>Huiwon Jang</a>, <b><u>Myungkyu Koo</u></b>, <a>Jungwoo Park</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>"
     venue: "The Conference on Robot Learning (CoRL) 2026"
     paper_pdf: "https://arxiv.org/abs/2604.23272"
@@ -20,7 +24,9 @@ papers:
     selected: y
 
   - title: "HAMLET: Switch your Vision-Language-Action Model into a History-Aware Policy"
-    image: "/assets/publications/2025_hamlet/teaser.png"
+    image: "/assets/publications/2025_hamlet/teaser.webp"
+    image_width: 900
+    image_height: 408
     authors: "<b><u>Myungkyu Koo</u></b>*, <a href='https://choidae1.github.io/'>Daewon Choi</a>*, <a href='https://ismty0805.github.io'>Taeyoung Kim</a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://changyeon.page/'>Changyeon Kim</a>, <a href='https://younggyo.me/'>Younggyo Seo</a><sup>&#8224;</sup>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a><sup>&#8224;</sup>"
     venue: "International Conference on Learning Representations (ICLR) 2026"
     paper_pdf: "https://arxiv.org/abs/2510.00695"
@@ -30,7 +36,9 @@ papers:
     selected: y
 
   - title: "Contrastive Representation Regularization for Vision-Language-Action Models"
-    image: "/assets/publications/2025_rs_cl/overview.png"
+    image: "/assets/publications/2025_rs_cl/overview.webp"
+    image_width: 900
+    image_height: 453
     authors: "<a href='https://ismty0805.github.io'>Taeyoung Kim</a>, <a href='https://jiminlx.github.io/'>Jimin Lee</a>, <b><u>Myungkyu Koo</u></b>, <a href='https://kingdy2002.github.io/'>Dongyoung Kim</a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://changyeon.page/'>Changyeon Kim</a>, <a href='https://younggyo.me/'>Younggyo Seo</a><sup>&#8224;</sup>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a><sup>&#8224;</sup>"
     venue: "International Conference on Machine Learning (ICML) 2026"
     paper_pdf: "https://arxiv.org/abs/2510.01711"
@@ -40,7 +48,9 @@ papers:
     selected: y
 
   - title: "FontAdapter: Instant Font Adaptation in Visual Text Generation"
-    image: "/assets/publications/2024_fontadapter/teaser.png"
+    image: "/assets/publications/2024_fontadapter/teaser.webp"
+    image_width: 900
+    image_height: 446
     authors: "<b><u>Myungkyu Koo</u></b>, <a href='https://subin-kim-cv.github.io/'>Subin Kim</a>, <a href='https://sang-kyung.github.io/'>Sangkyung Kwak</a>, <a href='https://jaehyun513.github.io/'>Jaehyun Nam</a>, <a href='https://seojin-kim.github.io/'>Seojin Kim</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>"
     # venue: ""
     paper_pdf: "https://arxiv.org/abs/2506.05843"
