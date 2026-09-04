@@ -8,6 +8,33 @@
   <title>{{ site.data.main_info.name }}</title>
   <meta name="description" content="Homepage of Myungkyu Koo">
   <meta name="author" content="Myungkyu Koo">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Theme (applied before paint so the page never flashes the wrong colors)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') {
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Social / link previews
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.data.main_info.name }}">
+  <meta property="og:title" content="{{ site.data.main_info.name }}">
+  <meta property="og:description" content="Ph.D. student at KAIST working on robotics foundation models.">
+  <meta property="og:url" content="https://myungkyukoo.github.io/">
+  <meta property="og:image" content="https://myungkyukoo.github.io{{ site.data.main_info.profile_pic }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ site.data.main_info.name }}">
+  <meta name="twitter:description" content="Ph.D. student at KAIST working on robotics foundation models.">
+  <meta name="twitter:image" content="https://myungkyukoo.github.io{{ site.data.main_info.profile_pic }}">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -51,11 +78,15 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
-  <link rel="shortcut icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}> -->
+  <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
+  <link rel="shortcut icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
 
 </head>
 <body>
+
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+  </button>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -64,7 +95,7 @@
     <section class="header">
       <div class="row">
         <div class="three columns">
-          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" style="border-radius: 1rem;" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></a>
+          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" style="border-radius: 1rem;" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}' alt="{{ site.data.main_info.name }}"></a>
         </div>
         <div class="nine columns main-description">
             <h1>{{ site.data.main_info.name }}</h1>
@@ -73,25 +104,27 @@
             <p>{{ site.data.main_info.office }}</p>
             <p>{{ site.data.main_info.email }}</p>
             <p>
-              <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
                 <i class="ai fa ai-google-scholar-square" aria-hidden="true"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.github }}" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
                 <i class="fa fa-github-square" aria-hidden="true"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
                 <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-              </span>    
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.cv }}')" style="cursor: pointer">
+              <a class="social-link" href="{{ site.data.main_info.cv | prepend: site.baseurl }}" target="_blank" rel="noopener" aria-label="Curriculum Vitae" title="Curriculum Vitae">
                 <i class="fa ai ai-cv-square" aria-hidden="true"></i>
-              </span>
+              </a>
 
-              <!-- <span onclick="window.open('{{ site.data.main_info.semantic_scholar }}')" style="cursor: pointer">
+              {% if site.data.main_info.semantic_scholar %}
+              <a class="social-link" href="{{ site.data.main_info.semantic_scholar }}" target="_blank" rel="noopener" aria-label="Semantic Scholar" title="Semantic Scholar">
                 <i class="ai fa ai-semantic-scholar-square" aria-hidden="true"></i>
-              </span> -->
+              </a>
+              {% endif %}
 
             </p>
         </div>
@@ -123,15 +156,17 @@
           based on <a href="https://web.media.mit.edu/~msaveski/" style="font-weight: lighter">Martin Saveski</a>'s template
         </div>
         <div class="four columns">
-          <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
+          <a class="social-link" href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
             <i class="ai ai-google-scholar-square" aria-hidden="true"></i>
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
+          </a>
+          {% if site.data.main_info.twitter %}
+          <a class="social-link" href="{{ site.data.main_info.twitter }}" target="_blank" rel="noopener" aria-label="Twitter" title="Twitter">
             <i class="fa fa-twitter-square" aria-hidden="true"></i>
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
+          </a>
+          {% endif %}
+          <a class="social-link" href="{{ site.data.main_info.github }}" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
             <i class="fa fa-github-square" aria-hidden="true"></i>
-          </span>
+          </a>
         </div>
       </div>
     </div>

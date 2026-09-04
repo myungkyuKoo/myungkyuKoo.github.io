@@ -31,7 +31,7 @@ layout: default
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
-  <p style="font-size: 0.9em; color: gray;">
+  <p class="pub-legend">
     (*: Equal Contribution, <sup>&#8224;</sup>: Equal Advising, <sup>&#167;</sup>: Research Lead)
   </p>
 
@@ -42,7 +42,7 @@ layout: default
         <div class="paper">
           <div class="paper-row">
             <div class="paper-image">
-              <img src="{{ paper.image }}" alt="paper image">
+              <img src="{{ paper.image }}" alt="{{ paper.title }} teaser">
             </div>
             <div class="paper-info">
               <p class="title"><b>{{ paper.title }}</b></p>
@@ -50,16 +50,22 @@ layout: default
               <p><i>{{ paper.venue }}</i></p>
               <div class="paper-buttons">
                 {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
+                  <a class="button" href="{{ paper.paper_pdf }}" target="_blank" rel="noopener"><i class="fa fa-file-text-o" aria-hidden="true"></i>Paper</a>
                 {% endif %}
                 {% if paper.project_page %}
-                  <a class="button" href="{{ paper.project_page }}" target="_blank">Project</a>
+                  <a class="button" href="{{ paper.project_page }}" target="_blank" rel="noopener"><i class="fa fa-globe" aria-hidden="true"></i>Project</a>
+                {% endif %}
+                {% if paper.slides %}
+                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank" rel="noopener"><i class="fa fa-desktop" aria-hidden="true"></i>Slides</a>
+                {% endif %}
+                {% if paper.poster %}
+                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank" rel="noopener"><i class="fa fa-picture-o" aria-hidden="true"></i>Poster</a>
                 {% endif %}
                 {% if paper.video %}
-                  <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+                  <a class="button" href="{{ paper.video }}" target="_blank" rel="noopener"><i class="fa fa-play-circle-o" aria-hidden="true"></i>Video</a>
                 {% endif %}
                 {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+                  <a class="button" href="{{ paper.code }}" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>Code</a>
                 {% endif %}
               </div>
             </div>
@@ -67,41 +73,7 @@ layout: default
         </div>
       {% endfor %}
     </div>
-
-    <div class="tab-pane" id="papers-all">
-      {% for paper in site.data.publications.papers %}
-        <div class="paper">
-          <div class="row">
-            <div class="eight columns">
-              <p class="title"><b>{{ paper.title }}</b></p>
-              <p>{{ paper.authors }}</p>
-              <p><i>{{ paper.venue }}</i></p>
-              <div class="paper-buttons">
-                {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-                {% endif %}
-
-                {% if paper.slides %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                {% endif %}
-
-                {% if paper.poster %}
-                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                {% endif %}
-
-                {% if paper.video %}
-                  <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-                {% endif %}
-
-                {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
-    {% endfor %}
-    </div>
+  </div>
 </div>
 
 <!-- ========== Education ========== -->
@@ -177,5 +149,3 @@ layout: default
     {% endfor %}
   </ul>
 </div> -->
-
-</div>
