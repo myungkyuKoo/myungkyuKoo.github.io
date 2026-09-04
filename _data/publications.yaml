@@ -12,7 +12,7 @@ papers:
   - title: "Modular Sensory Stream for Integrating Physical Feedback in Vision-Language-Action Models"
     image: "/assets/publications/2026_moss/teaser.png"
     authors: "<a href='https://jiminlx.github.io/'>Jimin Lee</a>, <a>Huiwon Jang</a>, <b><u>Myungkyu Koo</u></b>, <a>Jungwoo Park</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>"
-    # venue: ""
+    venue: "The Conference on Robot Learning (CoRL) 2026"
     paper_pdf: "https://arxiv.org/abs/2604.23272"
     project_page: "https://jiminlx.github.io/MoSS"
     # code: ""
