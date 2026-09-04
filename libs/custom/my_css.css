@@ -58,6 +58,9 @@ a:not([href]) {
   color: inherit;
   font-weight: inherit;
   cursor: inherit; }
+img {
+  max-width: 100%;
+  height: auto; }
 code {
   background: var(--surface);
   border-color: var(--rule); }
