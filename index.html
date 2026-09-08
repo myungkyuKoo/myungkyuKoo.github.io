@@ -42,7 +42,19 @@ layout: default
                loading="lazy" decoding="async">
         </div>
         <div class="paper-info">
-          <p class="title"><b>{{ paper.title }}</b></p>
+          <p class="title">
+            {% if paper.type and paper.index %}
+              {% case paper.type %}
+                {% when 'conference' %}{% assign prefix = 'C' %}
+                {% when 'journal' %}{% assign prefix = 'J' %}
+                {% when 'technical_report' %}{% assign prefix = 'T' %}
+                {% when 'preprint' %}{% assign prefix = 'P' %}
+                {% else %}{% assign prefix = nil %}
+              {% endcase %}
+              {% if prefix %}<span class="paper-index">[{{ prefix }}{{ paper.index }}]</span>{% endif %}
+            {% endif %}
+            <b>{{ paper.title }}</b>
+          </p>
           <p>{{ paper.authors }}</p>
           {% if paper.venue %}<p><i>{{ paper.venue }}</i></p>{% endif %}
           <div class="paper-buttons">
